@@ -10,6 +10,7 @@ private_key = RSA.importKey(private_key_string)
 f = open(os.environ['HOME'] + "/.ssh/.secret.txt", "r")
 encrypted_string = str(f.read())
 
+# Decrypt with private key
 decrypted = private_key.decrypt(ast.literal_eval(encrypted_string))
 f.close()
 

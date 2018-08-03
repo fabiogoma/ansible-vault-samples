@@ -9,7 +9,7 @@ public_key = RSA.importKey(public_key_string)
 
 password = getpass.getpass('Password: ')
 
-#Encrypt with public key
+# Encrypt with public key
 encrypted = public_key.encrypt(password, 32)
 
 f = open(os.environ['HOME'] + "/.ssh/.secret.txt", "w")
